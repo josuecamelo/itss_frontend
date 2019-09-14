@@ -8,21 +8,29 @@ import {GrowlModule} from 'primeng/growl';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
-import { MensagensComponent } from './mensagens/mensagens.component';
+import {ClientesClientModule} from './client/clientes/clientes-client.module';
+import {HttpClientModule} from '@angular/common/http';
+import {TableModule} from 'primeng/table';
+import {PaginatorModule} from 'primeng/paginator';
+import {ScrollingModule} from  '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent,
-    MensagensComponent
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ScrollingModule,
+    PaginatorModule,
     AppRoutingModule,
     InputTextModule,
     ButtonModule,
-    GrowlModule
+    GrowlModule,
+    TableModule,
+    ClientesClientModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

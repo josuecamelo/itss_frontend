@@ -1,0 +1,27 @@
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../environments/environment';
+
+/**
+ * Classe responsável por prover a integração entre o endpoint de Clientes.
+ *
+ * @author Josué Camelo
+ */
+@Injectable()
+export class ClientesService {
+
+  /**
+   * Construtor da classe.
+   *
+   * @param http
+   */
+  constructor(private http: HttpClient) { }
+
+  /**
+   * Retorna a lista de Matrículas de acordo com a UF que são recuperadas da integração com a API de Bolsa Formação.
+   */
+  public getClientes(): Observable<any> {
+    return this.http.get(`${environment.urlApi}/clientes`);
+  }
+}
