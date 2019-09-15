@@ -9,6 +9,40 @@ import { Message } from 'primeng/components/common/api';
 export class AppComponent {
   msgs: Message[] = [];
   nome: string;
+  menus: MenuItem[] = [
+    {
+      path: '/clientes',
+      title: 'Clientes'
+    },
+    {
+      path: '/cores',
+      title: 'Cores'
+    },
+    {
+      path: '/estacionamento',
+      title: 'Estacionamento'
+    },
+    {
+      path: '/modelos',
+      title: 'Modelos'
+    },
+    {
+      path: '/patios',
+      title: 'Pátios'
+    },
+    {
+      path: '/usuarios',
+      title: 'Usuários'
+    },
+    {
+      path: '/vagas',
+      title: 'Vagas'
+    },
+    {
+      path: '/veiculos',
+      title: 'Veículos'
+    },
+  ];
 
   private showMessages() {
     this.msgs = [];
@@ -18,4 +52,10 @@ export class AppComponent {
   private onChangeEvent({ target }) {
     this.nome = target.value;
   }
+}
+
+export class MenuItem {
+  path: string;
+  title: string;
+  icon?: string;
 }

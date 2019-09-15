@@ -42,6 +42,9 @@ import { AdicionarVeiculoComponent } from './adicionar-veiculo/adicionar-veiculo
 import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {VeiculosClientModule} from './client/veiculos/veiculos-client.module';
+import { EstacionamentoComponent } from './estacionamento/estacionamento.component';
+import { EditarEstacionamentoComponent } from './editar-estacionamento/editar-estacionamento.component';
+import { AdicionarEstacionamentoComponent } from './adicionar-estacionamento/adicionar-estacionamento.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +69,10 @@ import {VeiculosClientModule} from './client/veiculos/veiculos-client.module';
     AdicionarVagaComponent,
     VeiculosComponent,
     AdicionarVeiculoComponent,
-    EditarVeiculoComponent
+    EditarVeiculoComponent,
+    EstacionamentoComponent,
+    EditarEstacionamentoComponent,
+    AdicionarEstacionamentoComponent
   ],
   imports: [
     BrowserModule,

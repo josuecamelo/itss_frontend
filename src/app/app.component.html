@@ -19,47 +19,11 @@
               Dashboard <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/clientes">
-              <span data-feather="file"></span>
-              Clientes
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/veiculos">
-              <span data-feather="shopping-cart"></span>
-              Veículos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/usuarios">
-              <span data-feather="shopping-cart"></span>
-              Usuários
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/modelos">
-              <span data-feather="shopping-cart"></span>
-              Modelos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/patios">
-              <span data-feather="shopping-cart"></span>
-              Pátios
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/vagas">
-              <span data-feather="shopping-cart"></span>
-              Vagas
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/cores">
-              <span data-feather="shopping-cart"></span>
-              Cores
-            </a>
+          <li class="nav-item" *ngFor="let item of menus">
+              <a class="nav-link" [routerLink]="[item.path]">
+                <span data-feather="file"></span>
+                {{ item.title }}
+              </a>
           </li>
         </ul>
       </div>
@@ -67,11 +31,6 @@
 
     <main role="main" style="margin-top: 10px;" class="col-md-12 ml-sm-auto col-lg-10 px-4">
       <router-outlet></router-outlet>
-<!--      <div class="col-sm-offset-2 col-sm-8">-->
-<!--        Nome : <input type="text" placeholder="Digite seu nome" pInputText (change)="onChangeEvent($event)"/>-->
-<!--        <button pButton type="button" (click)="showMessages()" icon="fa fa-check" label="Mensagem"></button>-->
-<!--        <p-growl [(value)]="msgs"></p-growl>-->
-<!--      </div>-->
     </main>
   </div>
 </div>
