@@ -20,6 +20,15 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AdicionarUsuarioComponent } from './adicionar-usuario/adicionar-usuario.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 import {UsuariosClientModule} from './client/usuarios/usuarios-client.module';
+import { EditarModeloComponent } from './editar-modelo/editar-modelo.component';
+import { AdicionarModeloComponent } from './adicionar-modelo/adicionar-modelo.component';
+import { ModelosComponent } from './modelos/modelos.component';
+import { CoresComponent } from './cores/cores.component';
+import { AdicionarCorComponent } from './adicionar-cor/adicionar-cor.component';
+import { EditarCorComponent } from './editar-cor/editar-cor.component';
+import { EditarPatioComponent } from './editar-patio/editar-patio.component';
+import { AdicionarPatioComponent } from './adicionar-patio/adicionar-patio.component';
+import { PatiosComponent } from './patios/patios.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +38,16 @@ import {UsuariosClientModule} from './client/usuarios/usuarios-client.module';
     AdicionarClienteComponent,
     UsuariosComponent,
     AdicionarUsuarioComponent,
-    EditarUsuarioComponent
+    EditarUsuarioComponent,
+    EditarModeloComponent,
+    AdicionarModeloComponent,
+    ModelosComponent,
+    CoresComponent,
+    AdicionarCorComponent,
+    EditarCorComponent,
+    EditarPatioComponent,
+    AdicionarPatioComponent,
+    PatiosComponent
   ],
   imports: [
     BrowserModule,
