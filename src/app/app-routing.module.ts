@@ -16,6 +16,12 @@ import {AdicionarCorComponent} from './adicionar-cor/adicionar-cor.component';
 import {PatiosComponent} from './patios/patios.component';
 import {EditarPatioComponent} from './editar-patio/editar-patio.component';
 import {AdicionarPatioComponent} from './adicionar-patio/adicionar-patio.component';
+import {VagasComponent} from './vagas/vagas.component';
+import {EditarVagaComponent} from './editar-vaga/editar-vaga.component';
+import {AdicionarVagaComponent} from './adicionar-vaga/adicionar-vaga.component';
+import {VeiculosComponent} from './veiculos/veiculos.component';
+import {EditarVeiculoComponent} from './editar-veiculo/editar-veiculo.component';
+import {AdicionarVeiculoComponent} from './adicionar-veiculo/adicionar-veiculo.component';
 
 const routes: Routes =  [
   { path: 'clientes', component: ClientesComponent },
@@ -33,6 +39,12 @@ const routes: Routes =  [
   { path: 'patios', component: PatiosComponent },
   { path: 'patios/editar', component: EditarPatioComponent },
   { path: 'patios/adicionar', component: AdicionarPatioComponent },
+  { path: 'vagas', component: VagasComponent },
+  { path: 'vagas/editar', component: EditarVagaComponent },
+  { path: 'vagas/adicionar', component: AdicionarVagaComponent },
+  { path: 'veiculos', component: VeiculosComponent },
+  { path: 'veiculos/editar', component: EditarVeiculoComponent },
+  { path: 'veiculos/adicionar', component: AdicionarVeiculoComponent },
   /*{ path: '**', component: AppComponent }*/
 ];
 

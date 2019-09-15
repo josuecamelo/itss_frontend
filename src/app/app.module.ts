@@ -37,6 +37,9 @@ import { EditarVagaComponent } from './editar-vaga/editar-vaga.component';
 import { AdicionarVagaComponent } from './adicionar-vaga/adicionar-vaga.component';
 import {VagasService} from './client/vagas/service/vagas.service';
 import {VagasClientModule} from './client/vagas/vagas-client.module';
+import { VeiculosComponent } from './veiculos/veiculos.component';
+import { AdicionarVeiculoComponent } from './adicionar-veiculo/adicionar-veiculo.component';
+import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import {VagasClientModule} from './client/vagas/vagas-client.module';
     PatiosComponent,
     VagasComponent,
     EditarVagaComponent,
-    AdicionarVagaComponent
+    AdicionarVagaComponent,
+    VeiculosComponent,
+    AdicionarVeiculoComponent,
+    EditarVeiculoComponent
   ],
   imports: [
     BrowserModule,
