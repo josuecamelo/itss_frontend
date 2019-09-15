@@ -16,7 +16,7 @@ export class PatiosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getPatio();
+    this.getPatios();
     this.cols = [
       { field: 'id', header: '#' },
       { field: 'descricao', header: 'Descrição' },
@@ -24,7 +24,7 @@ export class PatiosComponent implements OnInit {
     ];
   }
 
-  private getPatio(): void {
+  private getPatios(): void {
     this.patioService.getPatios().subscribe(data => {
       this.patios = data;
     }, error => {
