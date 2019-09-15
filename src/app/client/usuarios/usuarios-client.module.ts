@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import {UsuariosService} from './service/usuarios.service';
-/**
- * Modulo de integração com a API Rest Matrícula.
- */
+
 @NgModule({
   imports: [
     CommonModule

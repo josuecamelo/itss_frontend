@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import {ClientesService} from './service/clientes.service';
+import {CommonModule} from '@angular/common';
+import {ModuleWithProviders, NgModule} from '@angular/core';
+import {ModeloService} from './service/modelo.service';
 
 @NgModule({
   imports: [
@@ -8,15 +8,15 @@ import {ClientesService} from './service/clientes.service';
   ],
   declarations: []
 })
-export class ClientesClientModule {
+export class ModelosClientModule {
 
   /*** Convenção usada para que o módulo 'app' disponibilize as instâncias 'providers' como singleton para todos os modulos da aplicação.
      */
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: ClientesClientModule,
+      ngModule: ModelosClientModule,
       providers: [
-        ClientesService,
+        ModeloService,
       ]
     };
   }

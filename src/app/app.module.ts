@@ -29,6 +29,9 @@ import { EditarCorComponent } from './editar-cor/editar-cor.component';
 import { EditarPatioComponent } from './editar-patio/editar-patio.component';
 import { AdicionarPatioComponent } from './adicionar-patio/adicionar-patio.component';
 import { PatiosComponent } from './patios/patios.component';
+import {ModelosClientModule} from './client/modelos/modelos-client.module';
+import {CoresClientModule} from './client/cores/cores-client.module';
+import {PatiosClientModule} from './client/patios/patios-client.module';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { PatiosComponent } from './patios/patios.component';
     GrowlModule,
     TableModule,
     ClientesClientModule.forRoot(),
-    UsuariosClientModule.forRoot()
+    UsuariosClientModule.forRoot(),
+    ModelosClientModule.forRoot(),
+    CoresClientModule.forRoot(),
+    PatiosClientModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
