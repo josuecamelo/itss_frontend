@@ -1,1 +1,32 @@
-<p>adicionar-veiculo works!</p>
+<div class="col-md-12">
+  <h2 class="text-center">Adicionar Veículo</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="placa">Placa:</label>
+      <input type="text" [(ngModel)]="veiculo.placa" autofocus placeholder="Placa" name="placa" class="form-control" id="placa">
+    </div>
+
+    <div class="form-group">
+      <label>Cliente:</label>
+      <select placeHolder="Veículo" [(ngModel)]="veiculo.cliente" name="cliente" class="form-control" id="cliente">
+        <option *ngFor="let p of clientes" [ngValue]="p">{{p.nome}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Cor:</label>
+      <select placeHolder="Cor do Veículo" [(ngModel)]="veiculo.cor" name="cor" class="form-control" id="cor">
+        <option *ngFor="let c of cores" [ngValue]="c">{{c.nome}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Modelo Veículo:</label>
+      <select placeHolder="Modelo do Veículo" [(ngModel)]="veiculo.modelo" name="modelo" class="form-control" id="modelo">
+        <option *ngFor="let m of modelos" [ngValue]="m">{{m.nome}}</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success">Adicionar</button>
+  </form>
+</div>
