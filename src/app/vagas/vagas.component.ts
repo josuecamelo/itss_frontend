@@ -16,7 +16,7 @@ export class VagasComponent implements OnInit {
   constructor( private router: Router, private vagaService: VagasService,
                private patioService: PatiosService) { }
   ngOnInit() {
-    this.getModelo();
+    this.getPatios();
     this.cols = [
       { field: 'id', header: '#' },
       { field: 'numero', header: 'Número' },
@@ -24,7 +24,7 @@ export class VagasComponent implements OnInit {
     ];
   }
 
-  private getModelo(): void {
+  private getPatios(): void {
     this.vagaService.getVagas().subscribe(data => {
       this.vagas = data;
     }, error => {

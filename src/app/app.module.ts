@@ -40,6 +40,7 @@ import {VagasClientModule} from './client/vagas/vagas-client.module';
 import { VeiculosComponent } from './veiculos/veiculos.component';
 import { AdicionarVeiculoComponent } from './adicionar-veiculo/adicionar-veiculo.component';
 import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.componen
     ReactiveFormsModule,
     AppRoutingModule,
     InputTextModule,
+    AutoCompleteModule,
     ButtonModule,
     GrowlModule,
     TableModule,

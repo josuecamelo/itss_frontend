@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import {VagasService} from './service/vagas.service';
+import {VagasResolve} from './resolve/vagas.resolve';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ export class VagasClientModule {
       ngModule: VagasClientModule,
       providers: [
         VagasService,
+        VagasResolve
       ]
     };
   }

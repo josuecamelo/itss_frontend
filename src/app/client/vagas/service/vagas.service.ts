@@ -33,7 +33,7 @@ export class VagasService {
   }
 
   public create(vaga: Vaga): Observable<any> {
-    return this.http.post(`${environment.urlApi}/vaga/create`, vaga);
+    return this.http.post(`${environment.urlApi}/vagas/create`, vaga);
   }
 
   public delete(id: number): Observable<any> {
