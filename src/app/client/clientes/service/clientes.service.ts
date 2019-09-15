@@ -34,4 +34,8 @@ export class ClientesService {
   public create(cliente: Cliente): Observable<any> {
     return this.http.post(`${environment.urlApi}/clientes/create`, cliente);
   }
+
+  public delete(id: number): Observable<any> {
+    return this.http.delete(`${environment.urlApi}/clientes/${id}`);
+  }
 }

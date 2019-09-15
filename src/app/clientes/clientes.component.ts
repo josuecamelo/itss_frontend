@@ -41,6 +41,10 @@ export class ClientesComponent implements OnInit {
   }
 
   public excluir(cliente: Cliente): void {
-    console.log(cliente);
+    this.clienteService.delete(cliente.id)
+      .subscribe( data => {
+        const index = this.clientes.indexOf(cliente);
+        this.clientes.splice(index, 1);
+      });
   }
 }
