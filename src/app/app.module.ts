@@ -13,11 +13,16 @@ import {HttpClientModule} from '@angular/common/http';
 import {TableModule} from 'primeng/table';
 import {PaginatorModule} from 'primeng/paginator';
 import {ScrollingModule} from  '@angular/cdk/scrolling';
+import {ReactiveFormsModule} from '@angular/forms';
+import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
+import { AdicionarClienteComponent } from './adicionar-cliente/adicionar-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent
+    ClientesComponent,
+    EditarClienteComponent,
+    AdicionarClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +30,7 @@ import {ScrollingModule} from  '@angular/cdk/scrolling';
     HttpClientModule,
     ScrollingModule,
     PaginatorModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     InputTextModule,
     ButtonModule,

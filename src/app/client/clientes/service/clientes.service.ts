@@ -18,10 +18,11 @@ export class ClientesService {
    */
   constructor(private http: HttpClient) { }
 
-  /**
-   * Retorna a lista de Matrículas de acordo com a UF que são recuperadas da integração com a API de Bolsa Formação.
-   */
   public getClientes(): Observable<any> {
     return this.http.get(`${environment.urlApi}/clientes`);
+  }
+
+  public getClienteById(clienteId: any): Observable<any> {
+    return this.http.get(`${environment.urlApi}/clientes/${clienteId}`);
   }
 }

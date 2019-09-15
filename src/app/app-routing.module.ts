@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ClientesComponent} from './clientes/clientes.component';
+import {EditarClienteComponent} from './editar-cliente/editar-cliente.component';
 
 
 const routes: Routes =  [
   { path: 'clientes', component: ClientesComponent },
-  /*{ path: 'hero/:id',      component: HeroDetailComponent },
-  {
+  { path: 'clientes/editar', component: EditarClienteComponent },
+  /*{
     path: 'heroes',
     component: HeroListComponent,
     data: { title: 'Heroes List' }
