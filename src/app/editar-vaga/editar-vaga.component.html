@@ -9,7 +9,7 @@
     <div class="form-group">
       <label>Pátio</label>
       <select placeHolder="Pátio" [(ngModel)]="vaga.patio" name="patio" class="form-control" id="patio">
-        <option *ngFor="let p of patios" [ngValue]="p">{{p.descricao}}</option>
+        <option [selected]="vaga.patio.id === patio.id" *ngFor="let patio of patios" [ngValue]="patio">{{patio.descricao}}</option>
       </select>
     </div>
 
