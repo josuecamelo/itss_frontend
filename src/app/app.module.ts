@@ -13,7 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {TableModule} from 'primeng/table';
 import {PaginatorModule} from 'primeng/paginator';
 import {ScrollingModule} from  '@angular/cdk/scrolling';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
 import { AdicionarClienteComponent } from './adicionar-cliente/adicionar-cliente.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -32,6 +32,11 @@ import { PatiosComponent } from './patios/patios.component';
 import {ModelosClientModule} from './client/modelos/modelos-client.module';
 import {CoresClientModule} from './client/cores/cores-client.module';
 import {PatiosClientModule} from './client/patios/patios-client.module';
+import { VagasComponent } from './vagas/vagas.component';
+import { EditarVagaComponent } from './editar-vaga/editar-vaga.component';
+import { AdicionarVagaComponent } from './adicionar-vaga/adicionar-vaga.component';
+import {VagasService} from './client/vagas/service/vagas.service';
+import {VagasClientModule} from './client/vagas/vagas-client.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,10 @@ import {PatiosClientModule} from './client/patios/patios-client.module';
     EditarCorComponent,
     EditarPatioComponent,
     AdicionarPatioComponent,
-    PatiosComponent
+    PatiosComponent,
+    VagasComponent,
+    EditarVagaComponent,
+    AdicionarVagaComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +66,7 @@ import {PatiosClientModule} from './client/patios/patios-client.module';
     HttpClientModule,
     ScrollingModule,
     PaginatorModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     InputTextModule,
@@ -69,6 +78,7 @@ import {PatiosClientModule} from './client/patios/patios-client.module';
     ModelosClientModule.forRoot(),
     CoresClientModule.forRoot(),
     PatiosClientModule.forRoot(),
+    VagasClientModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
