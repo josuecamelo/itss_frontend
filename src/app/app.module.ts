@@ -16,13 +16,20 @@ import {ScrollingModule} from  '@angular/cdk/scrolling';
 import {ReactiveFormsModule} from '@angular/forms';
 import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
 import { AdicionarClienteComponent } from './adicionar-cliente/adicionar-cliente.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { AdicionarUsuarioComponent } from './adicionar-usuario/adicionar-usuario.component';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import {UsuariosClientModule} from './client/usuarios/usuarios-client.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientesComponent,
     EditarClienteComponent,
-    AdicionarClienteComponent
+    AdicionarClienteComponent,
+    UsuariosComponent,
+    AdicionarUsuarioComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +44,7 @@ import { AdicionarClienteComponent } from './adicionar-cliente/adicionar-cliente
     GrowlModule,
     TableModule,
     ClientesClientModule.forRoot(),
+    UsuariosClientModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

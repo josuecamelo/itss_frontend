@@ -2,15 +2,15 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-          <h3 class="text-center">Clientes</h3>
+        <h3 class="text-center">Usuários</h3>
       </div>
     </div>
 
     <div class="row" style="padding-bottom: 15px;">
-        <a class="btn btn-primary" routerLink="/cliente/adicionar">Novo Cliente</a>
+      <a class="btn btn-primary" routerLink="/usuario/adicionar">Novo Usuário</a>
     </div>
     <div class="row">
-      <p-table [paginator]="true" [rows]="10" [columns]="cols" [value]="clientes">
+      <p-table [paginator]="true" [rows]="10" [columns]="cols" [value]="usuarios">
         <ng-template pTemplate="header" let-columns>
           <tr>
             <th *ngFor="let col of columns">
