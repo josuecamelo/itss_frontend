@@ -1,1 +1,18 @@
-<p>editar-patio works!</p>
+<div class="col-md-12">
+  <h2 class="text-center">Editar Usuário</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <input type="text" formControlName="descricao" placeholder="descricao" name="descricao" class="form-control" id="descricao">
+    </div>
+
+    <div class="form-group">
+      <label for="taxaHora">Taxa/Hora:</label>
+      <input type="number" formControlName="taxaHora" placeholder="Valor Tarifa/Hora" name="taxaHora" class="form-control" id="taxaHora">
+    </div>
+
+    <button class="btn btn-success">Atualizar</button>
+  </form>
+</div>
+<p-growl [(value)]="msgs"></p-growl>
+
