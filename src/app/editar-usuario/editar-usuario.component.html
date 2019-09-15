@@ -1,1 +1,27 @@
-<p>editar-usuario works!</p>
+<div class="col-md-12">
+  <h2 class="text-center">Adicionar Cliente</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" formControlName="nome" placeholder="Nome" name="nome" class="form-control" id="nome">
+    </div>
+
+    <div class="form-group">
+      <label for="login">Login:</label>
+      <input formControlName="login" placeholder="Login" name="login" class="form-control" id="login">
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha:</label>
+      <input type="password" formControlName="senha" placeholder="Senha" name="senha" class="form-control" id="senha">
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input formControlName="telefone" required placeholder="telefone" name="telefone" class="form-control" id="telefone">
+    </div>
+
+    <button class="btn btn-success">Atualizar</button>
+  </form>
+</div>
+<p-growl [(value)]="msgs"></p-growl>
