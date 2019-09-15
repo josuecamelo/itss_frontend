@@ -22,6 +22,9 @@ import {AdicionarVagaComponent} from './adicionar-vaga/adicionar-vaga.component'
 import {VeiculosComponent} from './veiculos/veiculos.component';
 import {EditarVeiculoComponent} from './editar-veiculo/editar-veiculo.component';
 import {AdicionarVeiculoComponent} from './adicionar-veiculo/adicionar-veiculo.component';
+import {EstacionamentoComponent} from './estacionamento/estacionamento.component';
+import {EditarEstacionamentoComponent} from './editar-estacionamento/editar-estacionamento.component';
+import {AdicionarEstacionamentoComponent} from './adicionar-estacionamento/adicionar-estacionamento.component';
 
 const routes: Routes =  [
   { path: 'clientes', component: ClientesComponent },
@@ -45,7 +48,10 @@ const routes: Routes =  [
   { path: 'veiculos', component: VeiculosComponent },
   { path: 'veiculos/editar', component: EditarVeiculoComponent },
   { path: 'veiculos/adicionar', component: AdicionarVeiculoComponent },
-  /*{ path: '**', component: AppComponent }*/
+  { path: 'estacionamentos', component: EstacionamentoComponent },
+  { path: 'estacionamentos/editar', component: EditarEstacionamentoComponent },
+  { path: 'estacionamentos/adicionar', component: AdicionarEstacionamentoComponent },
+  { path: '**', component: AppComponent }
 ];
 
 @NgModule({

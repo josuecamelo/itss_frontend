@@ -19,7 +19,7 @@ export class AppComponent {
       title: 'Cores'
     },
     {
-      path: '/estacionamento',
+      path: '/estacionamentos',
       title: 'Estacionamento'
     },
     {
