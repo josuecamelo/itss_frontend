@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-center">Pátios</h3>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 15px;">
+      <a class="btn btn-primary" routerLink="/veiculos/adicionar">Novo Veículo</a>
+    </div>
+    <div class="row">
+      <p-table [paginator]="true" [rows]="10" [columns]="cols" [value]="veiculos">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns">
+              {{col.header}}
+            </th>
+            <th>
+              Cliente
+            </th>
+            <th>
+              Cor
+            </th>
+            <th>
+              Modelo
+            </th>
+            <th class="text-center">
+              Ações
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr>
+            <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+            </td>
+            <td>
+              {{rowData.cliente.nome}}
+            </td>
+            <td>
+              {{rowData.cor.nome}}
+            </td>
+            <td>
+              {{rowData.modelo.nome}}
+            </td>
+            <td>
+              <button pButton type="button" (click)="recuperarRegistro(rowData)" icon="fa fa-edit" label="Editar"></button>&nbsp;&nbsp;
+              <button pButton type="button" class="ui-button-danger" (click)="excluir(rowData)" icon="fa fa-trash" label="Excluir"></button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>

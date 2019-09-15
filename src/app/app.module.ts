@@ -41,6 +41,7 @@ import { VeiculosComponent } from './veiculos/veiculos.component';
 import { AdicionarVeiculoComponent } from './adicionar-veiculo/adicionar-veiculo.component';
 import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {VeiculosClientModule} from './client/veiculos/veiculos-client.module';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     ModelosClientModule.forRoot(),
     CoresClientModule.forRoot(),
     PatiosClientModule.forRoot(),
-    VagasClientModule.forRoot()
+    VagasClientModule.forRoot(),
+    VeiculosClientModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
