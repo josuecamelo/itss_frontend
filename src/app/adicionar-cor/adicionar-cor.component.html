@@ -1,1 +1,13 @@
-<p>adicionar-cor works!</p>
+<div class="col-md-12">
+  <h2 class="text-center">Adicionar Cor</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" formControlName="nome" placeholder="Nome" name="nome" class="form-control" id="nome">
+    </div>
+
+    <button class="btn btn-success">Adicionar</button>
+  </form>
+</div>
+<p-growl [(value)]="msgs"></p-growl>
+
