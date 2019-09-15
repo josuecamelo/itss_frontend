@@ -45,6 +45,7 @@ import {VeiculosClientModule} from './client/veiculos/veiculos-client.module';
 import { EstacionamentoComponent } from './estacionamento/estacionamento.component';
 import { EditarEstacionamentoComponent } from './editar-estacionamento/editar-estacionamento.component';
 import { AdicionarEstacionamentoComponent } from './adicionar-estacionamento/adicionar-estacionamento.component';
+import {EstacionamentosClientModule} from './client/estacionamentos/estacionamentos-client.module';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { AdicionarEstacionamentoComponent } from './adicionar-estacionamento/adi
     CoresClientModule.forRoot(),
     PatiosClientModule.forRoot(),
     VagasClientModule.forRoot(),
-    VeiculosClientModule.forRoot()
+    VeiculosClientModule.forRoot(),
+    EstacionamentosClientModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
