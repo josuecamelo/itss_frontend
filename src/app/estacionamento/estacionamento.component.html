@@ -7,7 +7,7 @@
     </div>
 
     <div class="row" style="padding-bottom: 15px;">
-      <a class="btn btn-primary" routerLink="/estacionamento/adicionar">Novo Estacionamento</a>
+      <a class="btn btn-primary" routerLink="/estacionamentos/adicionar">Novo Estacionamento</a>
     </div>
     <div class="row">
       <p-table [paginator]="true" [rows]="10" [columns]="cols" [value]="estacionamentos">
@@ -20,6 +20,9 @@
               Data de Entrada
             </th>
             <th>
+              Data de Saída
+            </th>
+            <th>
               Cliente
             </th>
             <th>
@@ -27,6 +30,9 @@
             </th>
             <th>
               Vaga
+            </th>
+            <th>
+              Valor Pago
             </th>
             <th class="text-center">
               Ações
@@ -41,6 +47,10 @@
             <td>
               {{rowData.entrada | date: 'dd/MM/yyyy - hh:mm:ss'}}
             </td>
+
+            <td>
+              {{rowData.saida | date: 'dd/MM/yyyy - hh:mm:ss'}}
+            </td>
             <td>
               {{rowData.veiculo.cliente.nome}}
             </td>
@@ -51,8 +61,12 @@
               V.{{rowData.vaga.numero}} - {{rowData.vaga.patio.descricao}}
             </td>
             <td>
+              {{!rowData?.valorPago && !rowData.saida ? "-" : rowData?.valorPago}}
+            </td>
+            <td>
               <button pButton type="button" (click)="recuperarRegistro(rowData)" icon="fa fa-edit" label="Editar"></button>&nbsp;&nbsp;
               <button pButton type="button" class="ui-button-danger" (click)="excluir(rowData)" icon="fa fa-trash" label="Excluir"></button>
+              <button *ngIf="!rowData.valorPago > 0"  pButton type="button" class="ui-button-info" (click)="registrarSaida(rowData)" label="Registrar Saida"></button>
             </td>
           </tr>
         </ng-template>

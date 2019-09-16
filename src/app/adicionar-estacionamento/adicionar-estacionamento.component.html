@@ -1,1 +1,20 @@
-<p>adicionar-estacionamento works!</p>
+<div class="col-md-12">
+  <h2 class="text-center">Adicionar Estacionamento</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Veículo:</label>
+      <select placeHolder="Veículo" [(ngModel)]="estacionamento.veiculo" name="veiculo" class="form-control" id="veiculo">
+        <option *ngFor="let v of veiculos" [ngValue]="v">{{v.modelo.nome}} / {{v.placa}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Vagas:</label>
+      <select placeHolder="Vaga" [(ngModel)]="estacionamento.vaga" name="vaga" class="form-control" id="vaga">
+        <option *ngFor="let vaga of vagas" [ngValue]="vaga">{{vaga.numero}}</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success">Atualizar</button>
+  </form>
+</div>

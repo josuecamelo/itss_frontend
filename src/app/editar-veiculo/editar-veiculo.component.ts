@@ -41,7 +41,7 @@ export class EditarVeiculoComponent implements OnInit {
     this.veiculoId = window.localStorage.getItem('editVeiculoId');
     if (!this.veiculoId) {
       alert('Ação Inválida.');
-      this.router.navigate(['vagas']);
+      this.router.navigate(['veiculos']);
       return;
     }
 

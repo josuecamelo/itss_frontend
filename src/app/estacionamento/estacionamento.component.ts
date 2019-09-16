@@ -27,27 +27,18 @@ export class EstacionamentoComponent implements OnInit {
     ];
   }
 
-
-  /*id: number;
-  entrada: Date;
-  saida: Date;
-  valorPago: number;
-  veiculo: Veiculo;
-  vaga: Vaga;*/
-
   private getEstacionadas(): void {
     this.estacionamentoService.getEstacionamentos().subscribe(data => {
       this.estacionamentos = data;
-      console.log(data);
     }, error => {
       console.log(error);
     });
   }
 
-  public recuperarRegistro(patio: Patio): void {
-    window.localStorage.removeItem('editVeiculoId');
-    window.localStorage.setItem('editVeiculoId', patio.id.toString());
-    this.router.navigate(['veiculos/editar']);
+  public recuperarRegistro(estacionamento: Estacionamento): void {
+    window.localStorage.removeItem('editEstacionamentoId');
+    window.localStorage.setItem('editEstacionamentoId', estacionamento.id.toString());
+    this.router.navigate(['estacionamentos/editar']);
   }
 
   public excluir(estacionamento: Estacionamento): void {
@@ -55,6 +46,13 @@ export class EstacionamentoComponent implements OnInit {
       .subscribe( data => {
         const index = this.estacionamentos.indexOf(estacionamento);
         this.estacionamentos.splice(index, 1);
+      });
+  }
+
+  public registrarSaida(estacionamento: Estacionamento): void {
+    this.estacionamentoService.registarSaida(estacionamento)
+      .subscribe( data => {
+        this.getEstacionadas();
       });
   }
 }

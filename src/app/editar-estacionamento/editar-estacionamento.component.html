@@ -1,1 +1,30 @@
-<p>editar-estacionamento works!</p>
+<div class="col-md-12">
+  <h2 class="text-center">Editar Estacionamento</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="entrada">Entrada:</label>
+      <input type="text" [(ngModel)]="estacionamento.entrada" autofocus placeholder="Entrada" name="entrada" class="form-control" id="entrada">
+    </div>
+
+    <div class="form-group">
+      <label for="saida">Saida:</label>
+      <input type="text" [(ngModel)]="estacionamento.saida" autofocus placeholder="Saída" name="saida" class="form-control" id="saida">
+    </div>
+
+    <div class="form-group">
+      <label>Veículo:</label>
+      <select placeHolder="Veículo" [(ngModel)]="estacionamento.veiculo" name="veiculo" class="form-control" id="veiculo">
+        <option [selected]="estacionamento.veiculo.id === v.id" *ngFor="let v of veiculos" [ngValue]="v">{{v.modelo.nome}} / {{v.placa}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Vagas:</label>
+      <select placeHolder="Vaga" [(ngModel)]="estacionamento.vaga" name="vaga" class="form-control" id="vaga">
+        <option [selected]="estacionamento.vaga.id === vaga.id" *ngFor="let vaga of vagas" [ngValue]="vaga">{{vaga.numero}}</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success">Atualizar</button>
+  </form>
+</div>

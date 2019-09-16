@@ -2,8 +2,6 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
-import {Vaga} from '../../../models/vaga';
-import {Veiculo} from '../../../models/veiculo';
 import {Estacionamento} from '../../../models/estacionamento';
 
 
@@ -36,6 +34,10 @@ export class EstacionamentosService {
 
   public create(estacionamento: Estacionamento): Observable<any> {
     return this.http.post(`${environment.urlApi}/estacionamentos/create`, estacionamento);
+  }
+
+  public registarSaida(estacionamento: Estacionamento): Observable<any> {
+    return this.http.get(`${environment.urlApi}/estacionamentos/saida/${estacionamento.id}`);
   }
 
   public delete(id: number): Observable<any> {
