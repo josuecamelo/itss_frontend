@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Vaga} from '../models/vaga';
 import {Router} from '@angular/router';
 import {VagasService} from '../client/vagas/service/vagas.service';
-import {PatiosService} from '../client/patios/service/patios.service';
+import {VagaStatus} from '../models/vaga-status';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
       this.vagas = data;
 
       for (let i = 0; i < this.vagas.length; i++) {
-        if ( this.vagas[i].status === 'DISPONIVEL' ) {
+        if ( this.vagas[i].status === VagaStatus.DISPONIVEL ) {
           this.vagasLivres++;
         } else {
           this.vagasOcupadas++;
