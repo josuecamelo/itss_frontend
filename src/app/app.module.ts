@@ -47,6 +47,7 @@ import { EditarEstacionamentoComponent } from './editar-estacionamento/editar-es
 import { AdicionarEstacionamentoComponent } from './adicionar-estacionamento/adicionar-estacionamento.component';
 import {EstacionamentosClientModule} from './client/estacionamentos/estacionamentos-client.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     EstacionamentoComponent,
     EditarEstacionamentoComponent,
     AdicionarEstacionamentoComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
