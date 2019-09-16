@@ -25,6 +25,7 @@ import {AdicionarVeiculoComponent} from './adicionar-veiculo/adicionar-veiculo.c
 import {EstacionamentoComponent} from './estacionamento/estacionamento.component';
 import {EditarEstacionamentoComponent} from './editar-estacionamento/editar-estacionamento.component';
 import {AdicionarEstacionamentoComponent} from './adicionar-estacionamento/adicionar-estacionamento.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes =  [
   { path: 'clientes', component: ClientesComponent },
@@ -51,6 +52,8 @@ const routes: Routes =  [
   { path: 'estacionamentos', component: EstacionamentoComponent },
   { path: 'estacionamentos/editar', component: EditarEstacionamentoComponent },
   { path: 'estacionamentos/adicionar', component: AdicionarEstacionamentoComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: DashboardComponent },
   { path: '**', component: AppComponent }
 ];
 
