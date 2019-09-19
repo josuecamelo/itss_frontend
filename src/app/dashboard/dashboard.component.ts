@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
       this.vagas = data;
 
       for (let i = 0; i < this.vagas.length; i++) {
-        if ( this.vagas[i].status === 'DISPONIVEL' ) {
+        if ('DISPONIVEL' === this.vagas[i].status) {
           this.vagasLivres++;
         } else {
           this.vagasOcupadas++;
