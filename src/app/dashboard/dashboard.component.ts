@@ -13,6 +13,12 @@ export class DashboardComponent implements OnInit {
   public vagas: Vaga[];
   vagasLivres: any;
   vagasOcupadas: any;
+  vagaStatus: any = [
+    {id: "DISPONIVEL", nome: "Disponível"},
+    {id: "OCUPADA", nome: "Ocupada"},
+    {id: "INDISPONIVEL", nome: "Indisponível"}
+  ];
+
   constructor( private router: Router, private vagaService: VagasService) { }
 
   ngOnInit() {
@@ -22,11 +28,19 @@ export class DashboardComponent implements OnInit {
   }
 
   totalVagas(): void {
+    var vagaStatus = [
+      {id: "DISPONIVEL", nome: "Disponível"},
+      {id: "OCUPADA", nome: "Ocupada"},
+      {id: "INDISPONIVEL", nome: "Indisponível"}
+    ];
+
     this.vagaService.getVagas().subscribe(data => {
       this.vagas = data;
 
       for (let i = 0; i < this.vagas.length; i++) {
-        if (VagaStatus.DISPONIVEL === this.vagas[i].status) {
+        console.log(VagaStatus.DISPONIVEL)
+        console.log(this.vagaStatus.id);
+        if (this.vagaStatus[0].id === this.vagas[i].status) {
           this.vagasLivres++;
         } else {
           this.vagasOcupadas++;
